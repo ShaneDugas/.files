@@ -1,3 +1,5 @@
+alias me="https://github.com/shanedugas/.files"
+
 alias h="history"
 alias hist="history"
 
