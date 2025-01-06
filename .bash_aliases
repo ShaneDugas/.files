@@ -147,4 +147,4 @@ alias cowsay="fortune | cowsay"
 # Backup files with timestamp
 alias backup='tar -czvf $(date +%F)-backup.tar.gz'
 # Open weather information
-alias weather="curl wttr.in"
+alias weather="curl wttr.in/msy"
