@@ -1,8 +1,10 @@
 alias me="https://github.com/shanedugas/.files"
-
+alias lac="ssh -i ~/.ssh/prolug prolug@prolug.asuscomm.com"
+alias psc="mchammer@prolug.asuscomm.com"
 alias h="history"
 alias hist="history"
-
+alias lsl="ls -al"
+alias vi="nvim"
 
 # File management
 alias mv="mv -i"   # Prompt before overwrite
@@ -147,4 +149,4 @@ alias cowsay="fortune | cowsay"
 # Backup files with timestamp
 alias backup='tar -czvf $(date +%F)-backup.tar.gz'
 # Open weather information
-alias weather="curl wttr.in/msy"
+alias wx="curl wttr.in"
