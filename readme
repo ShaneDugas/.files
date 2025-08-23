@@ -1,1 +1,14 @@
-readme
+#To sync dotfiles from git
+
+
+apt install stow
+
+mkdir ~/dotfiles
+cd dotfiles
+
+
+git clone https://github.com/shanedugas/.files.git
+
+#This will add links to all files in the parent directory to the current directory
+stow .
+
