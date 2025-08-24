@@ -1,7 +1,7 @@
 #To sync dotfiles from git
 
-
-apt install stow
+##Install Stow
+-apt install stow
 
 mkdir ~/dotfiles
 cd dotfiles
@@ -12,3 +12,13 @@ git clone https://github.com/shanedugas/.files.git
 #This will add links to all files in the parent directory to the current directory
 stow .
 
+
+
+##On Rocky 9.5
+#I had to install epel to find the stow install
+#
+#	```
+#	dnf install epel-release
+#	dnf update
+#	dnf install stow
+#	```

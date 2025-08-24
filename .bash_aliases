@@ -4,7 +4,7 @@ alias psc="mchammer@prolug.asuscomm.com"
 alias h="history"
 alias hist="history"
 alias lsl="ls -al"
-
+alias la="ls -al"
 # File management
 alias mv="mv -i"   # Prompt before overwrite
 alias cp="cp -i"   # Prompt before overwrite
