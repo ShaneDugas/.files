@@ -1,8 +1,3 @@
-require ("zorg")
-print ("moving to 'require zorg'")
-require ("plugin")
-print (" moving into plugin" )
-
 colorscheme=mine
 print ("hello")
 
@@ -48,6 +43,11 @@ vim.keymap.set({'n', 'v', 'x' }, '<C-b>', '<C-b>zz')
 vim.keymap.set({'n', 'v', 'x' }, '<C-d>', '<C-d>zz')
 vim.keymap.set({'n', 'v', 'x' }, '<C-u>', '<C-u>zz')
 
+
+require ("zorg")
+print ("moving to 'require zorg'")
+require ("plugin")
+print (" moving into plugin" )
 
 --vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 --    set clipboard+=unnamedplus
