@@ -1,23 +1,24 @@
+--#iset cliipboard = iunnamedplus
+
 colorscheme=mine
 print ("hello")
 
---Leader key
-vim.g.mapleader = " "
 
 vim.o.signcolumn = yes
-
---Numbered Lines
+----------------------------------------
+--Numbered Lines##########
 vim.o.number = true
-
---Relative numbered lines
+--Relative numbered lines##########
 vim.o.relativenumber = true
-
+----------------------------------------
 --Line wrap
 vim.o.wrap =false
 
 --Supposed to be tab spaces but not working
 vim.tabstop = 4
 --#######################REMAPS####################################
+--Leader key
+vim.g.mapleader = " "
 --This is for moving selections then in Visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -50,4 +51,4 @@ require ("plugin")
 print (" moving into plugin" )
 
 --vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
---    set clipboard+=unnamedplus
+--#    set clipboard+=unnamedplus
