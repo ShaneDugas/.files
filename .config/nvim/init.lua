@@ -16,9 +16,12 @@ vim.o.wrap =false
 
 --Supposed to be tab spaces but not working
 vim.tabstop = 4
+
 --#######################REMAPS####################################
+
 --Leader key
 vim.g.mapleader = " "
+
 --This is for moving selections then in Visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -27,7 +30,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 --Run :Source on the current file
-vim.keymap.set('n','<leader>o', ':update<CR> :source<CR>')
+vim.keymap.set('n','<leader>r', ':update<CR> :source<CR>')
 
 --Write the current file to disk
 vim.keymap.set('n','<leader>w', ':write<CR>')
@@ -44,6 +47,9 @@ vim.keymap.set({'n', 'v', 'x' }, '<C-b>', '<C-b>zz')
 vim.keymap.set({'n', 'v', 'x' }, '<C-d>', '<C-d>zz')
 vim.keymap.set({'n', 'v', 'x' }, '<C-u>', '<C-u>zz')
 
+--Insert line below and above
+vim.keymap.set('n','<leader>o', 'o<esc>')
+vim.keymap.set('n','<leader>O', 'O<esc>')
 
 require ("zorg")
 print ("moving to 'require zorg'")
