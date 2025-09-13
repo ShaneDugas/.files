@@ -38,6 +38,7 @@ vim.keymap.set('n','<leader>w', ':write<CR>')
 --:Quit
 vim.keymap.set('n','<leader>q', ':quit<CR>')
 
+--Yank to black hole register
 vim.keymap.set({'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
 vim.keymap.set({'n', 'v', 'x' }, '<leader>d', '"+y<CR>')
 
@@ -51,10 +52,13 @@ vim.keymap.set({'n', 'v', 'x' }, '<C-u>', '<C-u>zz')
 vim.keymap.set('n','<leader>o', 'o<esc>')
 vim.keymap.set('n','<leader>O', 'O<esc>')
 
+--Change sessions (like alt-tab? Still need to set this one up)
+vim.keymap.set('n','<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
+
 require ("zorg")
 print ("moving to 'require zorg'")
 require ("plugin")
 print (" moving into plugin" )
 
---vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 --#    set clipboard+=unnamedplus
