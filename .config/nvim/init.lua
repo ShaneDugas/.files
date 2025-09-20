@@ -1,8 +1,11 @@
---#iset cliipboard = iunnamedplus
+---#iset cliipboard = iunnamedplus
 
 colorscheme=mine
 print ("hello")
 
+--# Set search case sensitivity
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.o.signcolumn = yes
 ----------------------------------------
@@ -62,3 +65,8 @@ print (" moving into plugin" )
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 --#    set clipboard+=unnamedplus
+
+vim.keymap.set('n', '<leader>ps', function() 
+		builtin.grep_string({ search = vim.fn.input ("Grep > ") });
+		end)
+

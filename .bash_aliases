@@ -89,6 +89,8 @@ alias gitopen='xdg-open $(git config --get remote.origin.url | sed "s/git@/https
 # --------------------------------------
 # NETWORKING AND SYSTEM UTILITIES
 # --------------------------------------
+#My ip alias ddition
+alias ip='ip -color -br addr'
 # Get public IP address
 alias myip="curl ifconfig.me"
 # Show active network connections
@@ -101,20 +103,6 @@ alias listen="lsof -iTCP -sTCP:LISTEN -P -n"
 alias wgetmirror="wget -m -p -E -k -np"
 # Show local IPs
 alias netinfo="ifconfig | grep 'inet ' | grep -v 127.0.0.1"
-
-# --------------------------------------
-# DOCKER COMMAND SHORTCUTS
-# --------------------------------------
-# Build Docker image
-alias dbuild='docker build -t'
-# Clean up unused Docker resources
-alias dclean='docker system prune -f'
-# Remove dangling Docker volumes
-alias drmvol="docker volume rm $(docker volume ls -qf dangling=true)"
-# Remove all Docker containers
-alias drmall="docker rm $(docker ps -aq)"
-# Stop all Docker containers
-alias dstopall="docker stop $(docker ps -q)"
 
 # --------------------------------------
 # QUICK UTILITIES
