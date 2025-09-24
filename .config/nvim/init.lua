@@ -1,14 +1,17 @@
+print (".config/nvim/init.lua")
 ---#iset cliipboard = iunnamedplus
 
 colorscheme=mine
-print ("hello")
+
 
 --# Set search case sensitivity
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.hlsearch = true
 
 vim.o.signcolumn = yes
-----------------------------------------
+
+---------------------------------------
 --Numbered Lines##########
 vim.o.number = true
 --Relative numbered lines##########
@@ -20,6 +23,10 @@ vim.o.wrap =false
 --Supposed to be tab spaces but not working
 vim.tabstop = 4
 
+--SmD--Ruler adds----------------
+vim.opt.ruler=true
+vim.opt.rulerformat = "%l,%c %= %V %= %P"
+vim.opt.colorcolumn = "80"
 --#######################REMAPS####################################
 
 --Leader key
