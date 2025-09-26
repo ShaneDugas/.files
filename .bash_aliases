@@ -1,3 +1,5 @@
+alias vim="nvim ."
+alias vi="nvim ."
 alias me="https://github.com/shanedugas/.files"
 alias lac="ssh -i ~/.ssh/prolug prolug@prolug.asuscomm.com"
 alias psc="mchammer@prolug.asuscomm.com"
