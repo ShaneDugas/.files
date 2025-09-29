@@ -11,6 +11,8 @@ vim.opt.hlsearch = true
 
 vim.o.signcolumn = yes
 
+--Show background changes
+vim.o.autoread = true
 ---------------------------------------
 --Numbered Lines##########
 vim.o.number = true
@@ -19,6 +21,7 @@ vim.o.relativenumber = true
 ----------------------------------------
 --Line wrap
 vim.o.wrap =false
+vim.o.showbreak = ">"
 
 --Supposed to be tab spaces but not working
 vim.tabstop = 4
