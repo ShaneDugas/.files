@@ -1,4 +1,4 @@
-print ("this is the nvim/lua/zorg/packer.lua file")
+print ("this is the nvim/lua/plugins.lua file")
 
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
@@ -14,18 +14,13 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  -- lua/plugins/rose-pine.lua
-  use ({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-use ( 'nvim-treesitter/playground')
-use ( 'mbbill/undotree')
-use ( 'tpope/vim-fugitive')
-use ( 'theprimeagen/harpoon')
+-- lua/plugins/rose-pine.lua
+use { 'rose-pine/neovim', as = 'rose-pine',}
+
+use ( 'nvim-treesitter/nvim-treesitter', )
+use 'nvim-treesitter/playground'
+use 'mbbill/undotree'
+use 'tpope/vim-fugitive'
+use 'theprimeagen/harpoon'
 end)
-  
+
