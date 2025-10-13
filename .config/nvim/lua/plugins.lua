@@ -1,9 +1,5 @@
-print ("this is the nvim/lua/plugins.lua file")
 
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -17,10 +13,12 @@ return require('packer').startup(function(use)
 -- lua/plugins/rose-pine.lua
 use { 'rose-pine/neovim', as = 'rose-pine',}
 
-use ( 'nvim-treesitter/nvim-treesitter', )
+use 'nvim-treesitter/nvim-treesitter'
 use 'nvim-treesitter/playground'
 use 'mbbill/undotree'
 use 'tpope/vim-fugitive'
 use 'theprimeagen/harpoon'
+use 'neovim/nvim-lspconfig'
+use 'williamboman/mason.nvim'
 end)
 

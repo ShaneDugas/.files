@@ -1,5 +1,5 @@
 -- Configuration for nvim-treesitter/playground
-require('nvim-treesitter.playground').setup({
+require('nvim-treesitter.configs').setup({
   -- Add your Treesitter Playground configurations here
   -- For example:
   -- enable = true,

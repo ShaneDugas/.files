@@ -1,0 +1,21 @@
+Error detected while processing /home/smd/dotfiles/.config/nvim/init.lua:
+E5113: Error while calling lua chunk: /home/smd/.config/nvim/lua/configs/lspconfig.lua:3: module 'mason-lspconfig' not found:
+	no field package.preload['mason-lspconfig']
+	no file './mason-lspconfig.lua'
+	no file '/usr/share/luajit-2.1/mason-lspconfig.lua'
+	no file '/usr/local/share/lua/5.1/mason-lspconfig.lua'
+	no file '/usr/local/share/lua/5.1/mason-lspconfig/init.lua'
+	no file '/usr/share/lua/5.1/mason-lspconfig.lua'
+	no file '/usr/share/lua/5.1/mason-lspconfig/init.lua'
+	no file './mason-lspconfig.so'
+	no file '/usr/local/lib/lua/5.1/mason-lspconfig.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/mason-lspconfig.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+	[C]: in function 'require'
+	/home/smd/.config/nvim/lua/configs/lspconfig.lua:3: in main chunk
+	[C]: in function 'require'
+	/home/smd/dotfiles/.config/nvim/init.lua:19: in main chunk
+nvim-lspconfig support for Nvim 0.10 or older is deprecated, use Nvim 0.11+ instead.
+Feature will be removed in nvim-lspconfig v3.0.0
+**********************************this is a test from the nvim/after/plugin/test.lua file

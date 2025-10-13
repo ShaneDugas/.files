@@ -1,5 +1,3 @@
--- /home/smd/.config/nvim/init.lua
-
 -- Load options
 require('options')
 
@@ -17,4 +15,5 @@ require('configs.treesitter-playground')
 require('configs.harpoon')
 require('configs.fugitive') 
 require('configs.rose-pine')
-
+require('configs.mason')
+require('configs.lspconfig')
