@@ -1,4 +1,4 @@
-print ("packer_compiled dot lua")
+print ("Now processing /nvim/plugin/packer_compiled.lua")
 -- Automatically generated packer.nvim plugin loader code
 
 if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then

@@ -1,8 +1,21 @@
 print (".config/nvim/init.lua")
+print ("/nvim/init.lua = moving to 'require zorg' which is the zorg directory")
+require ("zorg")
 ---#iset cliipboard = iunnamedplus
 
 colorscheme=mine
+--# Show whitespace chars ###########################
+vim.opt.listchars = {
+  space = '·',       -- Show spaces as middle dots
+  tab = '▸ ',        -- Show tabs as a right-pointing triangle and a space
+  eol = '↵',         -- Show end-of-line as a return arrow
+  trail = '•',       -- Show trailing spaces as bullet points
+  extends = '>',     -- Show 'extends' character
+  precedes = '<'     -- Show 'precedes' character
+}
 
+vim.opt.list = true -- Enable showing listchars
+--####################################################
 
 --# Set search case sensitivity
 vim.opt.ignorecase = true
@@ -67,11 +80,6 @@ vim.keymap.set('n','<leader>O', 'O<esc>')
 
 --Change sessions (like alt-tab? Still need to set this one up)
 vim.keymap.set('n','<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
-
-require ("zorg")
-print ("moving to 'require zorg'")
-require ("plugin")
-print (" moving into plugin" )
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 --#    set clipboard+=unnamedplus
