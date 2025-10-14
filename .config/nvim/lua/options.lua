@@ -10,7 +10,6 @@ vim.opt.listchars = {
   precedes = '<'
 }
 vim.opt.list = true -- Enable showing listchars
-
 -- Search settings
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

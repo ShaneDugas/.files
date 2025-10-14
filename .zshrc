@@ -262,3 +262,4 @@ fi
      source ~/.bash_aliases
  fi
 #
+export PATH="/opt/nvim/bin:$PATH"
