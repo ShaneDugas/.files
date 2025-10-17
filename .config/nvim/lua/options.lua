@@ -1,4 +1,6 @@
 -- /home/smd/.config/nvim/lua/options.lua
+vim.opt_local.spell = true
+vim.opt_local.spelllang = "en_us"
 
 -- Show whitespace characters
 vim.opt.listchars = {

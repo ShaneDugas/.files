@@ -48,4 +48,52 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set('n', '<leader>ps', function()
   local builtin = require('telescope.builtin')
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
-end)
+end);
+
+-- NOTE: Semicolon is required above to separate the preceding function from the next keymap definition.
+
+-- Set the color cycle key
+local colors = {
+  "rose-pine-main",
+  "rose-pine-moon",
+  "rose-pine-dawn",
+  "rose-pine",
+  "evening",
+  "habamax",
+  "default",
+  "peachpuff",
+  "lunaperche",
+  "delek",
+  "darkblue",
+  "unokai",
+  "torte",
+  "wildcharm",
+  "koehler",
+  "pablo",
+  "ron",
+  "blue",
+  "desert",
+  "sorbet",
+  "retrobox",
+  "shine",
+  "industry",
+  "murphy",
+  "morning",
+  "zellner",
+  "zaibatsu",
+  "elflord",
+  "quiet",
+  "slate",
+}
+local current_color_index = 1
+
+function CycleColors()
+  current_color_index = current_color_index + 1
+  if current_color_index > #colors then
+    current_color_index = 1
+  end
+  vim.cmd("colorscheme " .. colors[current_color_index])
+end
+
+vim.keymap.set('n', '<leader>c', CycleColors)
+
