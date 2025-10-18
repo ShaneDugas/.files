@@ -65,6 +65,7 @@ local colors = {
 --  "peachpuff",
 --  "lunaperche",
 --  "delek",
+--
 --  "darkblue",
   "unokai",
   "torte",
