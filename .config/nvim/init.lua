@@ -2,6 +2,9 @@
 -- Load options
 require('options')
 
+-- Load options
+require('netrw')
+
 -- Load keymaps
 require('remap')
 

@@ -1,6 +1,7 @@
 
 
 
+-- vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Git find files' })
 
 -- Set the leader key
 vim.g.mapleader = " "
