@@ -59,31 +59,31 @@ local colors = {
   "rose-pine-moon",
   "rose-pine-dawn",
   "rose-pine",
-  "evening",
+--  "evening",
   "habamax",
   "default",
-  "peachpuff",
-  "lunaperche",
-  "delek",
-  "darkblue",
+--  "peachpuff",
+--  "lunaperche",
+--  "delek",
+--  "darkblue",
   "unokai",
   "torte",
   "wildcharm",
   "koehler",
   "pablo",
   "ron",
-  "blue",
+--  "blue",
   "desert",
   "sorbet",
-  "retrobox",
-  "shine",
+--  "retrobox",
+--  "shine",
   "industry",
   "murphy",
-  "morning",
-  "zellner",
+--  "morning",
+--  "zellner",
   "zaibatsu",
   "elflord",
-  "quiet",
+--  "quiet",
   "slate",
 }
 local current_color_index = 1
@@ -93,8 +93,10 @@ function CycleColors()
   if current_color_index > #colors then
     current_color_index = 1
   end
-  vim.cmd("colorscheme " .. colors[current_color_index])
+  local new_scheme = colors[current_color_index]
+  vim.cmd("colorscheme " .. new_scheme)
+  vim.api.nvim_echo({{"colorscheme " .. new_scheme}}, true, {})
 end
 
-vim.keymap.set('n', '<leader>c', CycleColors)
+vim.keymap.set('n', '<leader>l', CycleColors)
 
