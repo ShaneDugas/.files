@@ -16,12 +16,14 @@ use { 'rose-pine/neovim', as = 'rose-pine',}
 use 'nvim-treesitter/nvim-treesitter'
 use 'nvim-treesitter/playground'
 use 'mbbill/undotree'
-use 'tpope/vim-fugitive'
 use 'theprimeagen/harpoon'
 use 'neovim/nvim-lspconfig'
 use 'williamboman/mason.nvim'
 use 'williamboman/mason-lspconfig.nvim'
 
+use 'tpope/vim-fugitive'
+use 'tpope/vim-commentary'---vim--commentary
+use 'tpope/vim-surround'
 -- Autocompletion plugins
 use 'hrsh7th/nvim-cmp'               -- The completion plugin itself
 use 'hrsh7th/cmp-nvim-lsp'           -- LSP source for nvim-cmp

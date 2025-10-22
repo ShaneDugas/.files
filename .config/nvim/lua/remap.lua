@@ -51,13 +51,17 @@ vim.keymap.set('n', '<leader>ps', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end);
 
+-- Telescope find
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+
 -- NOTE: Semicolon is required above to separate the preceding function from the next keymap definition.
 
 -- Set the color cycle key
 local colors = {
   "rose-pine-main",
   "rose-pine-moon",
-  "rose-pine-dawn",
+--  "rose-pine-dawn",
   "rose-pine",
 --  "evening",
   "habamax",
@@ -72,9 +76,9 @@ local colors = {
   "wildcharm",
   "koehler",
   "pablo",
-  "ron",
+--  "ron",
 --  "blue",
-  "desert",
+--  "desert",
   "sorbet",
 --  "retrobox",
 --  "shine",

@@ -39,3 +39,10 @@ vim.o.expandtab = true
 vim.opt.ruler = true
 vim.opt.rulerformat = "%l,%c %= %V %= %P"
 vim.opt.colorcolumn = "80"
+--·Cursorline·highlighting↵
+vim.opt.cursorlineopt = { 'number' }
+--vim.opt.cursorline·=·true
+--Save asdf history
+vim.o.undofile = true
+
+
