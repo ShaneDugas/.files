@@ -1,6 +1,9 @@
 ---Netrw settings
 vim.g.netrw_banner = 0
 
+--Preview Style -Should open a preview in split
+vim.g.netrw_preview = 1
+
 --Simple,Extended,Treeview
 vim.g.netrw_liststyle·=·3·--·3·for·tree·view↵
 

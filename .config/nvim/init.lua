@@ -22,3 +22,8 @@ require('configs.rose-pine')
 require('configs.mason')
 require('configs.lspconfig')
 require('configs.cmp')
+
+require('copilot')
+
+require('zorg.motd')
+

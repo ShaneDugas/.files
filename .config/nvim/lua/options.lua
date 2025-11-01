@@ -1,3 +1,6 @@
+--Clipboard Shit---
+vim.o.clipboard=unnamed,unnamedplus
+
 -- /home/smd/.config/nvim/lua/options.lua
 vim.opt_local.spell = true
 vim.opt_local.spelllang = "en_us"
@@ -39,10 +42,4 @@ vim.o.expandtab = true
 vim.opt.ruler = true
 vim.opt.rulerformat = "%l,%c %= %V %= %P"
 vim.opt.colorcolumn = "80"
---·Cursorline·highlighting↵
-vim.opt.cursorlineopt = { 'number' }
---vim.opt.cursorline·=·true
---Save asdf history
-vim.o.undofile = true
-
 

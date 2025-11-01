@@ -1,10 +1,11 @@
-
-
+--Set the visual block mode hotkeys. This is because <C-v> in normal mode is used for paste in terminal.  
+vim.keymap.set('n', '<C-q>', '<C-v>', { noremap = true, silent = true })
 
 -- vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Git find files' })
 
 -- Set the leader key
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Move selected lines up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -42,7 +43,7 @@ vim.keymap.set('n','<leader>O', 'O<esc>')
 -- I've changed it to <leader>f to avoid the conflict.
 vim.keymap.set('n','<leader>f', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 
--- Toggle Undotree
+-- Toggle Undotree -move to undotree.lua
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Grep for a string
