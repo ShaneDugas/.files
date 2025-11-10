@@ -1,8 +1,0 @@
-The `require('lspconfig')` "framework" is deprecated, use vim.lsp.config (see :help lspconfig-nvim-0.11) instead.
-Feature will be removed in nvim-lspconfig v3.0.0
-stack traceback:
-	.../site/pack/packer/start/nvim-lspconfig/lua/lspconfig.lua:81: in function '__index'
-	/home/smd/.config/nvim/lua/configs/lspconfig.lua:31: in main chunk
-	[C]: in function 'require'
-	/home/smd/dotfiles/.config/nvim/init.lua:20: in main chunk
-**********************************this is a test from the nvim/after/plugin/test.lua file

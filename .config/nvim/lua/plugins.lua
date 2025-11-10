@@ -14,6 +14,14 @@ return require('packer').startup(function(use)
 use { 'rose-pine/neovim', as = 'rose-pine',}
 --**************Color****************************************************
 
+--**************LuaLine****************************************************
+use { 'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+--**************LuaLine****************************************************
+
+--**************Color****************************************************
+
 --**************Treesitter****************************************************
 use 'nvim-treesitter/nvim-treesitter'
 use 'nvim-treesitter/playground'

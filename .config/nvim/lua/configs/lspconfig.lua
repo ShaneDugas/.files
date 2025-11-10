@@ -3,6 +3,46 @@
 -- You can install LSP servers using :Mason in Neovim
 -- Then, manually configure them here.
 
+-- ============================================================================
+-- BEGIN: Diagnostic Signs Configuration
+-- ============================================================================
+-- Define custom icons for diagnostic signs in the sign column (gutter)
+-- These symbols will appear next to lines with errors, warnings, hints, and info
+local signs = {
+  Error = "✘",  -- Red X for errors
+  Warn = "▲",   -- Yellow triangle for warnings
+  Hint = "⚑",   -- Flag for hints
+  Info = "»"    -- Chevron for info messages
+}
+
+-- Register each sign type with Neovim's sign system
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type  -- Highlight group name (e.g., DiagnosticSignError)
+  vim.fn.sign_define(hl, {
+    text = icon,      -- The icon to display in the sign column
+    texthl = hl,      -- Highlight group for the icon color
+    numhl = ""        -- No special highlighting for line numbers
+  })
+end
+
+-- Configure how diagnostics are displayed throughout Neovim
+vim.diagnostic.config({
+  virtual_text = true,        -- Show diagnostic messages inline at end of line
+  signs = true,               -- Show diagnostic signs in the sign column (gutter)
+  update_in_insert = false,   -- Don't update diagnostics while in insert mode (less distracting)
+  underline = true,           -- Underline the problematic code
+  severity_sort = true,       -- Sort diagnostics by severity (errors first, then warnings, etc.)
+  float = {
+    border = 'rounded',       -- Use rounded borders for floating diagnostic windows
+    source = 'always',        -- Always show the source of the diagnostic (e.g., "eslint")
+    header = '',              -- No header text in floating window
+    prefix = '',              -- No prefix before diagnostic messages
+  },
+})
+-- ============================================================================
+-- END: Diagnostic Signs Configuration
+-- ============================================================================
+
 local on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')

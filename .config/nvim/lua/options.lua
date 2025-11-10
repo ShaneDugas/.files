@@ -1,5 +1,24 @@
 --Clipboard Shit---
-vim.o.clipboard=unnamed,unnamedplus
+-- vim.o.clipboard=unnamed,unnamedplus  -- Commented by Claude Code (2025-11-01)
+
+-- ============================================================================
+-- BEGIN: Claude Code - OSC 52 clipboard provider (2025-11-01)
+-- ============================================================================
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+  },
+  paste = {
+    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+  },
+}
+vim.opt.clipboard = 'unnamedplus'
+-- ============================================================================
+-- END: Claude Code - OSC 52 clipboard provider
+-- ============================================================================
 
 -- /home/smd/.config/nvim/lua/options.lua
 vim.opt_local.spell = true
@@ -12,9 +31,11 @@ vim.opt.listchars = {
   eol = '↵',
   trail = '•',
   extends = '>',
-  precedes = '<'
+  precedes = '<',
+  nbsp = '⍽',
 }
 vim.opt.list = true -- Enable showing listchars
+
 -- Search settings
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -41,5 +62,4 @@ vim.o.expandtab = true
 -- Ruler settings
 vim.opt.ruler = true
 vim.opt.rulerformat = "%l,%c %= %V %= %P"
-vim.opt.colorcolumn = "80"
-
+vim.opt.colorcolumn = "3,7,80"

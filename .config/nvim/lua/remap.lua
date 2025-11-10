@@ -30,17 +30,16 @@ vim.keymap.set({'n', 'v', 'x' }, '<leader>y', '"+y')
 vim.keymap.set({'n', 'v', 'x' }, '<leader>d', '"+d')
 
 -- Center screen on movement
-vim.keymap.set({'n', 'v', 'x' }, '<C-f>', '<C-f>zz')
-vim.keymap.set({'n', 'v', 'x' }, '<C-b>', '<C-b>zz')
-vim.keymap.set({'n', 'v', 'x' }, '<C-d>', '<C-d>zz')
-vim.keymap.set({'n', 'v', 'x' }, '<C-u>', '<C-u>zz')
+vim.keymap.set({'n', 'v', 'x' }, '<M-f>', '<C-f>zz')
+vim.keymap.set({'n', 'v', 'x' }, '<M-b>', '<C-b>zz')
+vim.keymap.set({'n', 'v', 'x' }, '<M-d>', '<C-d>zz')
+vim.keymap.set({'n', 'v', 'x' }, '<M-u>', '<C-u>zz')
 
 -- Insert blank lines
 vim.keymap.set('n','<leader>o', 'o<esc>')
 vim.keymap.set('n','<leader>O', 'O<esc>')
 
--- Open tmux sessionizer (Note: This was overriding your <C-f> mapping above)
--- I've changed it to <leader>f to avoid the conflict.
+-- Open tmux sessionizer 
 vim.keymap.set('n','<leader>f', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 
 -- Toggle Undotree -move to undotree.lua
@@ -51,6 +50,9 @@ vim.keymap.set('n', '<leader>ps', function()
   local builtin = require('telescope.builtin')
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end);
+
+-- Toggle spellcheck with F6
+vim.keymap.set('n', '<F6>', ':set spell!<CR>', { noremap = true, silent = true, desc = 'Toggle Spellcheck' })
 
 -- Telescope find
 local builtin = require('telescope.builtin')
