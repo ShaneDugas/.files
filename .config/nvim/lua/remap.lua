@@ -39,6 +39,17 @@ vim.keymap.set({'n', 'v', 'x' }, '<M-u>', '<C-u>zz')
 vim.keymap.set('n','<leader>o', 'o<esc>')
 vim.keymap.set('n','<leader>O', 'O<esc>')
 
+-- Splits
+vim.keymap.set('n','<leader>\\', '<C-w>v') -- split window vertically 
+vim.keymap.set('n','<leader>-', '<C-w>s') -- split window horizontally
+
+-- Navigate between splits using Ctrl + hjkl
+vim.keymap.set('n','<M-h>', '<C-w>h')
+vim.keymap.set('n','<M-j>', '<C-w>j')
+vim.keymap.set('n','<M-k>', '<C-w>k')
+vim.keymap.set('n','<M-l>', '<C-w>l')
+
+
 -- Open tmux sessionizer 
 vim.keymap.set('n','<leader>f', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 
@@ -56,7 +67,11 @@ vim.keymap.set('n', '<F6>', ':set spell!<CR>', { noremap = true, silent = true, 
 
 -- Telescope find
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+
+-- Telescope live grep - search across all files as you type
+-- Press <leader>fg (Space+f+g) to open live grep, then start typing to search
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 
 -- NOTE: Semicolon is required above to separate the preceding function from the next keymap definition.
 
