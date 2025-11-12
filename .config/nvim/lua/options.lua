@@ -24,6 +24,35 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt_local.spell = true
 vim.opt_local.spelllang = "en_us"
 
+--Backup and undo settings
+vim.opt.backupdir = "/home/smd/backup//"  -- Double slashes to avoid backup file name collissions
+vim.opt.backup = true
+vim.opt.writebackup = true
+vim.opt.backupcopy = "yes"
+vim.opt.backupskip = "/tmp/*,/private/tmp/*"
+
+-- Add timestamp as extension for backup files
+vim.api.nvim_create_autocmd('BufWritePre', {
+  group = vim.api.nvim_create_augroup('timestamp_backupext', { clear = true }),
+  desc = 'Add timestamp to backup extension',
+  pattern = '*',
+  callback = function()
+    vim.opt.backupext = '-' .. vim.fn.strftime('%Y%m%d%H%M%S')
+  end,
+})
+
+vim.opt.swapfile = false
+vim.opt.undofile = true
+vim.opt.undodir = "/home/smd/backup/undodir//"
+vim.opt.undolevels = 1000
+vim.opt.undoreload = 10000
+
+
+-- Disable bells
+vim.opt.belloff = all -- Disable error bells
+vim.opt.errorbells = false
+vim.opt.visualbell = true -- Enable visual bell instead of sound
+
 -- Show whitespace characters
 vim.opt.listchars = {
   space = '·',

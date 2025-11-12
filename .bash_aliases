@@ -1,6 +1,5 @@
 alias vim="nvim ."
 alias vi="nvim ."
-alias me="https://github.com/shanedugas/.files"
 alias lac="ssh -i ~/.ssh/prolug prolug@prolug.asuscomm.com"
 alias psc="mchammer@prolug.asuscomm.com"
 alias h="history"
@@ -127,8 +126,6 @@ alias update="sudo apt update && sudo apt upgrade -y"
 alias shrug="echo '¯\_(ツ)_/¯'"
 # Run the last command with sudo
 alias please="sudo !!"
-# Random useless fact
-alias randomfact="curl -s https://uselessfacts.jsph.pl/random.json?language=en | jq -r '.text'"
 # Fortune message with cowsay
 alias cowsay="fortune | cowsay"
 
