@@ -26,5 +26,5 @@ require('configs.lualine')
 
 require('copilot')
 
-require('zorg.motd')
+require('configs.nerdtree')
 

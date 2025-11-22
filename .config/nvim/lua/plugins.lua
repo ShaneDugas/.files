@@ -65,5 +65,8 @@ use 'hrsh7th/cmp-path'               -- File path source for nvim-cmp
 use 'L3MON4D3/LuaSnip'               -- Snippet engine 
 use 'saadparwaiz1/cmp_luasnip'       -- Snippet source for nvim-cmp
 --**************Autocompletion plugins*****************************************
+--**************NERDTree*****************************************************
+    -- NERDTree file explorer
+use 'preservim/nerdtree'
 end)
 
