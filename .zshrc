@@ -263,3 +263,10 @@ fi
  fi
 #
 export PATH="/opt/nvim/bin:$PATH"
+
+# bun completions
+[ -s "/home/smd/.bun/_bun" ] && source "/home/smd/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

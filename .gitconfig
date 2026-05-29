@@ -3,3 +3,5 @@
 [user]
 	name = Shane Dugas
 	email = Dugas.Shane@gmail.com
+[core]
+	editor = nvim

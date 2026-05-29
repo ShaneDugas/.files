@@ -1,3 +1,4 @@
+alias claude-proxy='~/scripts/claude-with-proxy.sh'
 alias vim="nvim ."
 alias vi="nvim ."
 alias lac="ssh -i ~/.ssh/prolug prolug@prolug.asuscomm.com"
@@ -17,7 +18,7 @@ alias cls="clear"
 alias grep="grep --color=auto"
 alias update="sudo apt update && sudo apt upgrade -y"
 
-
+alias cat="batcat"
 # --------------------------------------
 # BASIC NAVIGATION SHORTCUTS
 # --------------------------------------
@@ -30,8 +31,7 @@ alias up='cd $(printf "../%.0s" {1..$1})'
 # Go to the home directory and clear the screen
 alias ~="cd ~"
 alias cdh='cd ~; clear'
-# Go to the root of the Git repository
-alias bd='cd $(git rev-parse --show-toplevel)'
+# Go to the root of the Git repository (removed - using bd for Beads instead)
 
 # --------------------------------------
 # DIRECTORY AND FILE MANAGEMENT

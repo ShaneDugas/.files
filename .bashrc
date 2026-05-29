@@ -157,3 +157,6 @@ if ! shopt -oq posix; then
 fi
 [ -r /home/smd/.byobu/prompt ] && . /home/smd/.byobu/prompt   #byobu-prompt#
 export PATH="/opt/nvim/bin:$PATH"
+export PAI_DIR=~/.claude
+export PGPASSWORD='test123'
+export PATH="$HOME/.local/bin:$PATH"

@@ -1,3 +1,5 @@
 # Created on 11/1/25
 
 .config/github-copilot/
+.config/chromium/
+*.log
