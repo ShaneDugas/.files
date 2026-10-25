@@ -268,7 +268,7 @@ fi
 # export PATH="/opt/nvim/bin:$PATH"
 
 # bun completions
-[ -s "/home/dugass-local/.bun/_bun" ] && source "/home/dugass-local/.bun/_bun"
+[ -s "/home/smd/.bun/_bun" ] && source "/home/smd/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

@@ -25,7 +25,7 @@ vim.opt_local.spell = true
 vim.opt_local.spelllang = "en_us"
 
 --Backup and undo settings
-vim.opt.backupdir = "/home/dugass-local/backup//"  -- Double slashes to avoid backup file name collissions
+vim.opt.backupdir = "/home/smd/backup//"  -- Double slashes to avoid backup file name collissions
 vim.opt.backup = true
 vim.opt.writebackup = true
 vim.opt.backupcopy = "yes"
@@ -43,7 +43,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 
 vim.opt.swapfile = false
 vim.opt.undofile = true
-vim.opt.undodir = "/home/dugass-local/backup/undodir//"
+vim.opt.undodir = "/home/smd/backup/undodir//"
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
 
