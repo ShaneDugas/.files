@@ -10,6 +10,9 @@ setopt nonomatch           # hide error message if there is no match for the pat
 setopt notify              # report the status of background jobs immediately
 setopt numericglobsort     # sort filenames numerically when it makes sense
 setopt promptsubst         # enable command substitution in prompt
+# Added by Cursor on 2026-10-24 at approximately 6:20 PM CDT.
+# Fixes literal ESC[200~ paste markers appearing in zsh.
+unset zle_bracketed_paste  # stop zsh printing bracketed-paste markers on paste
 
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
@@ -262,10 +265,10 @@ fi
      source ~/.bash_aliases
  fi
 #
-export PATH="/opt/nvim/bin:$PATH"
+# export PATH="/opt/nvim/bin:$PATH"
 
 # bun completions
-[ -s "/home/smd/.bun/_bun" ] && source "/home/smd/.bun/_bun"
+[ -s "/home/dugass-local/.bun/_bun" ] && source "/home/dugass-local/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
